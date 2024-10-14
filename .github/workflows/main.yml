@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Sync S3 bucket
-        uses: jakejarvis/s3-sync-action@v1
+        uses: jakejarvis/s3-sync-action@v1.0.0
         with:
           args: --delete --acl public-read
           # Specify the source directory you want to sync with S3
