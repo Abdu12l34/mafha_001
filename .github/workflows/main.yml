@@ -16,7 +16,7 @@ jobs:
       - name: Sync S3 bucket
         uses: jakejarvis/s3-sync-action@v0.5.0
         with:
-          args: --delete --acl public-read ./website s3://${{ secrets.AWS_S3_BUCKET }}/  # Make sure the path is correct
+          args: --delete --acl public-read ./mafa-bucket s3://${{ secrets.AWS_S3_BUCKET }}/  # Make sure the path is correct
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
